@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 
 import { CommonService } from './common.service';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]

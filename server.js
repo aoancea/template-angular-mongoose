@@ -3,7 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var mongo = require('mongoose');
 
-var db = mongo.connect('mongodb://localhost:27017', function (err, response) {
+var db = mongo.connect('mongodb://localhost:27017/AngularCRUD', function (err, response) {
 	if (err) {
 		console.log(err);
 	} else {
@@ -54,3 +54,8 @@ app.post('/api/SaveUser', function (req, res) {
 		});
 	}
 });
+
+
+app.listen(8000, () => {
+    console.log('server is now running on port 8000')
+})
